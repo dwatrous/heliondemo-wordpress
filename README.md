@@ -1,4 +1,4 @@
-HP Helion microservice demo app
+HP Helion WordPress deployment
 =======================
 
 These files make it easy to deploy the latest version of WordPress on the Helion Development Platform. The instructions below show step-by-step how to push directly to a Helion Development Platform installation. Two services, MySQL and Filesystem, are required and can be managed by Dev Platform, assuming they were enabled when the platform was installed on Helion OpenStack. *This example is meant to be a starting point, not a production ready service. You'll want to ensure that the filesystem and mysql services can accommodate the scale requirements.*
