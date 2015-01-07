@@ -9,22 +9,22 @@ function Expand-ZIPFile($file, $destination) {
     }
 }
 
-# download latest wordpress
+# define filenames
 $wordpressdownloadurl = "https://wordpress.org/latest.zip"
 $wordpresszip = "$wheretosave\wordpress.zip"
-$webclient.DownloadFile($wordpressdownloadurl,$wordpresszip)
 
-# download cache plugin
 $cachedownloadurl = "https://downloads.wordpress.org/plugin/wp-fastest-cache.zip"
 $cachezip = "$wheretosave\wp-fastest-cache.zip"
-$webclient.DownloadFile($cachedownloadurl,$cachezip)
 
-# get the helion client
 $heliondownloadurl = "http://g7743e0143085e2793a5aef95989b09ea.cdn.hpcloudsvc.com/helion-1.0.1-win32-ix86.zip"
 $helionzip = "$wheretosave\helion-1.0.1-win32-ix86.zip"
+
+# download files
+$webclient.DownloadFile($wordpressdownloadurl,$wordpresszip)
+$webclient.DownloadFile($cachedownloadurl,$cachezip)
 $webclient.DownloadFile($heliondownloadurl,$helionzip)
 
-# unzip files into proper locations
+# unzip files
 Expand-ZIPFile –File "$wheretosave\wordpress.zip" –Destination "$wheretosave"
 Expand-ZIPFile –File "$wheretosave\wp-fastest-cache.zip" –Destination "$wheretosave\wordpress\wp-content\plugins"
 Expand-ZIPFile –File "$wheretosave\helion-1.0.1-win32-ix86.zip" –Destination "$wheretosave"
