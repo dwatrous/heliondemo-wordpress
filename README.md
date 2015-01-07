@@ -36,13 +36,13 @@ C:\Users\watrous\Documents\GitHub\heliondemo-wordpress>powershell .\clean.ps1
 The repository includes bash scripts to perform the steps above (and clean up). After cloning this repository, change into the main directory then run the command as follows
 
 ```
-watrous@server:~/heliondemo-wordpress$ init.sh
+watrous@server:~/heliondemo-wordpress$ ./init.sh
 ```
 
 To clean up, run the clean up script
 
 ```
-watrous@server:~/heliondemo-wordpress$ clean.sh
+watrous@server:~/heliondemo-wordpress$ ./clean.sh
 ```
 
 
