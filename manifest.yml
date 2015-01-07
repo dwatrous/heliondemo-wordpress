@@ -1,0 +1,19 @@
+applications:
+- name: wordpress
+  framework: php
+  instances: 1
+  mem: 256M
+  disk: 512M
+  services:
+    ${name}-db:
+      type: mysql
+    ${name}-fs:
+      type: filesystem
+  stackato:
+    #env:
+    #  http_proxy: http://proxy.company.com:8080
+    #  https_proxy: https://proxy.company.com:8080
+    hooks:
+      post-staging:
+      # setting up in filesystem
+      - sh helion-setup.sh
