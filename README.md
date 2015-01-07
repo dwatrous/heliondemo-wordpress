@@ -20,17 +20,34 @@ Unzip wp-fastest-cache.zip into the ```wp-content/plugin``` directory.
 Unzip the helion client and put the binary in the main directory.
 
 ## Initialization on Windows
-The repository includes a powershell script to perform the steps above. After cloning this repository, open a windows console and change into the main directory. Then run the command as follows
+The repository includes powershell scripts to perform the steps above (and clean up). After cloning this repository, open a windows console and change into the main directory. Then run the command as follows
 
 ```
 C:\Users\watrous\Documents\GitHub\heliondemo-wordpress>powershell .\init.ps1
 ```
 
+To clean up, run the clean up script
+
+```
+C:\Users\watrous\Documents\GitHub\heliondemo-wordpress>powershell .\clean.ps1
+```
+
 ## Initialization on Linux
-Coming soon.
+The repository includes bash scripts to perform the steps above (and clean up). After cloning this repository, change into the main directory then run the command as follows
+
+```
+watrous@server:~/heliondemo-wordpress$ init.sh
+```
+
+To clean up, run the clean up script
+
+```
+watrous@server:~/heliondemo-wordpress$ clean.sh
+```
+
 
 # Push to Helion Development Platform
-With all the files in place, all that's left is to ```helion push```.
+With all the files in place, all that's left is to ```helion push```. This assumes you have already successfully run ```helion target``` and ```helion login```.
 
 ```
 C:\Users\watrous\Documents\GitHub\heliondemo-wordpress>helion push
